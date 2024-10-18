@@ -75,6 +75,9 @@ This will start taking photos. It will also do the following:
 
 Create a CronJob to automatically start the next day at 04:00 the next day, incrementing the day number. The time to start can be configured in the script (timelapse.py).
 It also creates a CronJob to convert the current day into a video. This script runs at 22:05 on the same day. The time can also be configured in the script (timelapse.py).
+In the script (timelapse.py), I've commented the 2 areas that need to be changed for the photos and video creation.
+
+"Change the photo schedule here!" and "Change the video creation schedule here!"
 
 If you manually run the script (the first day), there might will be some issues with the amount of photos it takes and for how long. This can be circumvented in the following way:
 
