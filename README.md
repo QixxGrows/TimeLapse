@@ -22,6 +22,7 @@ camera_auto_detect=0
 **Add at end of file**
 
 dtoverlay=imx219,cam0
+
 dtoverlay=imx219,cam1
 
 **comment:** You technically only need one of the 2. Depending on which port you plugged the camera into. I added both (I'm using a RPi 5)
