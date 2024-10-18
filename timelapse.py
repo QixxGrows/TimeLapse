@@ -20,6 +20,7 @@ def create_cronjob(day_num, photo_count):
 	cronJob = CronTab(user='USERNAME')
 	cmd = 'python3 /home/USERNAME/TimeLapse/timelapse.py ' + str(day_num) + ' ' + str(photo_count)
 	job = cronJob.new(command=cmd)
+	# Chnage the photo schedule here!
 	job.minute.on(0)
 	job.hour.on(4)
 	cronJob.write()
@@ -27,8 +28,9 @@ def create_cronjob(day_num, photo_count):
 def create_cronjob_video(day_num):	
 	# Replace USERNAME with your username
 	cronJob = CronTab(user='USERNAME')
-	cmd = 'sh /home/USERNAME/TimeLapse/photos/create_gif_ffmpeg.sh ' + str(day_num)
+	cmd = 'sh /home/USERNAME/TimeLapse/photos/create_vid_ffmpeg.sh ' + str(day_num)
 	job = cronJob.new(command=cmd)
+	# Change the video creation schedule here!
 	job.minute.on(5)
 	job.hour.on(22)
 	cronJob.write()
@@ -41,21 +43,11 @@ if __name__ == "__main__":
 	camera_config = picam2.create_still_configuration(main={"size": (1920, 1080)}, lores={"size": (640, 480)}, display="lores")
 	picam2.configure(camera_config)
 
-	picam2.start()
-
-	#for j in range(int(sys.argv[1]), 100):
-		# 2160 photos taken at 30 second intervals is 18hrs
-		# 1440 photos taken at 30 second intervals is 12hrs
-		#capture_photo(int(sys.argv[2]), 30, 'day' + str(j))
-		
-		# 21600secs is 6hrs
-		# 43200secs is 12hrs
-		#time.sleep(int(sys.argv[3]))	
+	picam2.start()	
 	
 	capture_photo(int(sys.argv[2]), 30, 'day' + sys.argv[1])
 	
 	picam2.close()
-	
-# convert -delay 10 -loop 0 photo*.jpg animation.gif
+
 
 
