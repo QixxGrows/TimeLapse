@@ -50,6 +50,10 @@ mkdir TimeLapse\photos**
 
 Copy "timelapse.py" into the folder "\home\USERNAME\TimeLapse" and "create_vid_ffmpeg.sh" into "\home\USERNAME\TimeLapse\photos"
 
+Open the file "timelapse.py" in text editor (or a code editor like Geany)
+Replace every instance of USERNAME with the username of your RPi. Ensure that you only change USERNAME. If there are " or ', leave them.
+Do the same with "create_vid_ffmpeg.sh"
+
 then, run:
 
 **cd ~\TimeLapse\photos
