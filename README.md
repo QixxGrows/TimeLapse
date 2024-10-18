@@ -104,3 +104,8 @@ To kill the camera task triggered by CronTab, run the following:
 This will show a "python3" process that your username is running. Take a note of the process id
 
 **kill "process_id"**
+
+
+The photos will be created in **/home/USERNAME/TimeLapse/photos/** There will be a new folder for each day (eg. **\home\USERNAME\TimeLapse\photos\day1**)
+
+The videos will be created in **/home/USERNAME/TimeLapse/photos/** There will be individual files (eg. **\home\USERNAME\TimeLapse\photos\day1.mpeg**)
