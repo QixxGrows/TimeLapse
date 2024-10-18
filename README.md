@@ -76,9 +76,13 @@ If you manually run the script (the first day), there might will be some issues 
 
 1. Work out how many hours you still want photos to be taken of today (eg. 5hrs)
 2. Take this value and perform the following arithmetic:
+
    hrs * 60 * 2
+
    (5 * 60 * 2 = 600)
+
    **python3 ~\TimeLapse\timelapse.py 3 600**
+
    This will take photos for another 5hrs only. But the scheduled task will then also be configured for 5hrs.
 3. We then need to fix the scheduled task:
    **crontab -e** (if asked with editor, use nano. vi is broken on Debian)
