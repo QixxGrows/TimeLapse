@@ -13,7 +13,8 @@ sudo pip3 install numpy --upgrade
 sudo apt install python3-crontab
 sudo apt install python3-picamera2 --upgrade**
 
-sudo nano /boot/firmware/config.txt
+**sudo nano /boot/firmware/config.txt**
+
 **Update**
 camera_auto_detect=0
 **Add at end of file**
