@@ -2,7 +2,7 @@
 TimeLapse for RPi
 
 
-There's only 2 files required and a change to 1 file.
+There's only 3 files required and a change to 1 file.
 
 Setup:
 Full version of Raspbian on a RPi with enough storage space (I used a 512Gb SD).
@@ -50,16 +50,24 @@ cd ~
 
 **mkdir TimeLapse\photos**
 
-Copy "timelapse.py" into the folder "\home\USERNAME\TimeLapse" and "create_vid_ffmpeg.sh" into "\home\USERNAME\TimeLapse\photos"
+Copy "timelapse.py" into the folder "\home\USERNAME\TimeLapse"
+
+Copy "create_vid_ffmpeg.sh" into "\home\USERNAME\TimeLapse\photos"
+
+Copy "combine.sh" into "\home\USERNAME\TimeLapse\photos"
 
 Open the file "timelapse.py" in text editor (or a code editor like Geany)
 Replace every instance of USERNAME with the username of your RPi. Ensure that you only change USERNAME. If there are " or ', leave them.
 Do the same with "create_vid_ffmpeg.sh"
+Do the same with "combine.sh"
 
 then, run:
 
-**cd ~\TimeLapse\photos
-chmod +x .\create_vid_ffmpeg.shy**
+**cd ~\TimeLapse\photos**
+
+**chmod +x .\create_vid_ffmpeg.shy**
+
+**chmod +x .\combine.sh**
 
 Everything is now configured.
 
@@ -111,3 +119,14 @@ This will show a "python3" process that your username is running. Take a note of
 The photos will be created in **/home/USERNAME/TimeLapse/photos/** There will be a new folder for each day (eg. **/home/USERNAME/TimeLapse/photos/day1/photo0001.jpg**)
 
 The videos will be created in **/home/USERNAME/TimeLapse/photos/** There will be individual files (eg. **/home/USERNAME/TimeLapse/photos/day1.mp4**)
+
+The script **/home/USERNAME/TimeLapse/photos/combine.sh** will combine all videos (in chronological order) found in **/home/USERNAME/TimeLapse/photos/**
+
+So if you want certain videos to be excluded, move them into a temporary folder. Alternatively:
+1. Comment out the last line of the script (# ffmpeg...)
+2. Run the script. This will create a file "vidlist.txt"
+3. Open this file and delete the lines of the videos that you do not want to include
+4. Open **combine.sh** again, copy the last line into your clipboard (the one you commented out in step 1)
+5. Exit to terminal
+6. Paste clipboard and run (make sure that the # is not in the line)
+7. This will then use your modified "vidlist.txt" to create the video. You can also play around with the order of the individual videos if you like. But that doesn't really make sense.
