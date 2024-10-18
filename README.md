@@ -108,4 +108,4 @@ This will show a "python3" process that your username is running. Take a note of
 
 The photos will be created in **/home/USERNAME/TimeLapse/photos/** There will be a new folder for each day (eg. **/home/USERNAME/TimeLapse/photos/day1/photo0001.jpg**)
 
-The videos will be created in **/home/USERNAME/TimeLapse/photos/** There will be individual files (eg. **/home/USERNAME/TimeLapse/photos/day1.mpeg**)
+The videos will be created in **/home/USERNAME/TimeLapse/photos/** There will be individual files (eg. **/home/USERNAME/TimeLapse/photos/day1.mp4**)
