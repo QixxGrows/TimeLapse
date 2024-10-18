@@ -44,7 +44,7 @@ To test:
 
 Then, ensure you're NOT root, open a terminal and type the following:
 
-**cd ~ **
+cd ~
 
 **mkdir TimeLapse**
 
