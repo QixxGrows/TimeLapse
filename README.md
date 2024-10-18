@@ -44,9 +44,11 @@ To test:
 
 Then, ensure you're NOT root, open a terminal and type the following:
 
-**cd ~
-mkdir TimeLapse
-mkdir TimeLapse\photos**
+**cd ~**
+
+**mkdir TimeLapse**
+
+**mkdir TimeLapse\photos**
 
 Copy "timelapse.py" into the folder "\home\USERNAME\TimeLapse" and "create_vid_ffmpeg.sh" into "\home\USERNAME\TimeLapse\photos"
 
