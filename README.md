@@ -7,11 +7,15 @@ There's only 2 files required and a change to 1 file.
 Setup:
 Full version of Raspbian on a RPi with enough storage space (I used a 512Gb SD).
 
-**sudo apt install -y python3-kms++
-sudo apt install -y python3-pyqt5 python3-prctl libatlas-base-dev
-sudo pip3 install numpy --upgrade
-sudo apt install python3-crontab
-sudo apt install python3-picamera2 --upgrade**
+**sudo apt install -y python3-kms++**
+
+**sudo apt install -y python3-pyqt5 python3-prctl libatlas-base-dev**
+
+**sudo pip3 install numpy --upgrade**
+
+**sudo apt install python3-crontab**
+
+**sudo apt install python3-picamera2 --upgrade**
 
 **sudo nano /boot/firmware/config.txt**
 
@@ -27,7 +31,13 @@ dtoverlay=imx219,cam1
 
 **comment:** You technically only need one of the 2. Depending on which port you plugged the camera into. I added both (I'm using a RPi 5)
 
+
+
+
+
 Exit nano and reboot
+
+
 
 To test: 
 **rpicam-vid**
