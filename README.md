@@ -48,13 +48,13 @@ Then, ensure you're NOT root, open a terminal and type the following:
 
 cd ~
 
-**mkdir -p TimeLapse\photos**
+**mkdir -p ./TimeLapse/photos**
 
-Copy "timelapse.py" into the folder "\home\USERNAME\TimeLapse"
+Copy "timelapse.py" into the folder "/home/USERNAME/TimeLapse"
 
-Copy "create_vid_ffmpeg.sh" into "\home\USERNAME\TimeLapse\photos"
+Copy "create_vid_ffmpeg.sh" into "/home/USERNAME/TimeLapse/photos"
 
-Copy "combine.sh" into "\home\USERNAME\TimeLapse\photos"
+Copy "combine.sh" into "/home/USERNAME/TimeLapse/photos"
 
 Open the file "timelapse.py" in text editor (or a code editor like Geany)
 Replace every instance of USERNAME with the username of your RPi. Ensure that you only change USERNAME. If there are " or ', leave them.
@@ -63,23 +63,23 @@ Do the same with "combine.sh"
 
 then, run:
 
-**cd ~\TimeLapse\photos**
+**cd ~/TimeLapse/photos**
 
-**chmod +x .\create_vid_ffmpeg.sh**
+**chmod +x ./create_vid_ffmpeg.sh**
 
-**chmod +x .\combine.sh**
+**chmod +x ./combine.sh**
 
 Everything is now configured.
 
 Usage:
 
-python3 ~\TimeLapse\timelapse.py _day_number_ _number_of_photos_to_take_
+python3 ~/TimeLapse/timelapse.py _day_number_ _number_of_photos_to_take_
 
 The script will take a photo every 30 seconds (can be configured in the script). For 18hrs, use 2160 (hrs * 60 * 2)
 
 eg. Day 3, 18hrs:
 
-**python3 ~\TimeLapse\timelapse.py 3 2160**
+**python3 ~/TimeLapse/timelapse.py 3 2160**
 
 This will start taking photos. It will also do the following:
 
@@ -98,7 +98,7 @@ If you manually run the script (the first day), there might will be some issues 
 
    (5 * 60 * 2 = 600)
 
-   **python3 ~\TimeLapse\timelapse.py 3 600**
+   **python3 ~/TimeLapse/timelapse.py 3 600**
 
    This will take photos for another 5hrs only. But the scheduled task will then also be configured for 5hrs.
 3. We then need to fix the scheduled task:
