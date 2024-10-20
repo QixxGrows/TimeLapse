@@ -17,6 +17,8 @@ Full version of Raspbian on a RPi with enough storage space (I used a 512Gb SD).
 
 **sudo apt install python3-picamera2 --upgrade**
 
+**Edit the config file:**
+
 **sudo nano /boot/firmware/config.txt**
 
 **Update**
@@ -46,9 +48,7 @@ Then, ensure you're NOT root, open a terminal and type the following:
 
 cd ~
 
-**mkdir TimeLapse**
-
-**mkdir TimeLapse\photos**
+**mkdir -p TimeLapse\photos**
 
 Copy "timelapse.py" into the folder "\home\USERNAME\TimeLapse"
 
@@ -65,7 +65,7 @@ then, run:
 
 **cd ~\TimeLapse\photos**
 
-**chmod +x .\create_vid_ffmpeg.shy**
+**chmod +x .\create_vid_ffmpeg.sh**
 
 **chmod +x .\combine.sh**
 
